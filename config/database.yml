@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+
+development:
+  <<: *default
+  database: MeSoHungryPlant_development
+
+test:
+  <<: *default
+  database: MeSoHungryPlant_test
