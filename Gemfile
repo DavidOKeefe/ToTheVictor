@@ -22,6 +22,9 @@ gem 'turbolinks'
 # JSON APIs
 gem 'jbuilder', '~> 2.0'
 
+# Authentication & Authorization
+gem 'devise'
+
 group :development do
   gem 'better_errors'
   gem 'spring'
