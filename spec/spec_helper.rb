@@ -1,12 +1,12 @@
 require 'simplecov'
 SimpleCov.start
 
-ENV["RAILS_ENV"] ||= 'test'
+ENV['RAILS_ENV'] ||= 'test'
 
-require File.expand_path("../../config/environment", __FILE__)
-require "rspec/rails"
+require File.expand_path('../../config/environment', __FILE__)
+require 'rspec/rails'
 
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |file| require file }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
 
 RSpec.configure do |config|
 
