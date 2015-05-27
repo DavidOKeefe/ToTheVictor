@@ -1,7 +1,6 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-
       ## Database Authenticatable
       t.string :email,              null: false, unique: true
       t.string :encrypted_password, null: false, default: ""
@@ -9,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
-
       t.timestamps
     end
 
