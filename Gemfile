@@ -31,8 +31,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-byebug'
   gem 'factory_girl_rails'
+  gem 'pry-byebug'
   gem 'rspec-rails'
 end
 
