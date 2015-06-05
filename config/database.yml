@@ -5,8 +5,8 @@ default: &default
 
 development:
   <<: *default
-  database: MeSoHungryPlant_development
+  database: Springer_development
 
 test:
   <<: *default
-  database: MeSoHungryPlant_test
+  database: Springer_test
