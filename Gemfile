@@ -43,3 +43,7 @@ group :test do
   gem 'simplecov'
   gem 'turnip'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
