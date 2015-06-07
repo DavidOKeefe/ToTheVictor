@@ -1,4 +1,4 @@
-#Springer
+#ToTheVictor
 
-Application with my fav configurations for greenfielding.
+Spoils for winning.
 

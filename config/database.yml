@@ -5,8 +5,8 @@ default: &default
 
 development:
   <<: *default
-  database: Springer_development
+  database: to_the_victor_development
 
 test:
   <<: *default
-  database: Springer_test
+  database: to_the_victor_test
