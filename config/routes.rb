@@ -10,4 +10,6 @@ Rails.application.routes.draw do
       root to: 'dashboard#index', as: :authenticated_root
     end
   end
+
+  resources :players, only: [:index]
 end
