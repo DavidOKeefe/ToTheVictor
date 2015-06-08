@@ -9,3 +9,15 @@ end
 step 'I see :text' do |text|
   expect(page).to have_content text
 end
+
+step 'I am a logged in user' do
+  @user = create(:user)
+  visit '/'
+  fill_in 'user_email', with: @user.email
+  fill_in 'user_password', with: @user.password
+  click_button 'Log in'
+end
+
+step 'I am at the root path' do
+  visit '/'
+end
