@@ -1,3 +1,14 @@
-|Game Players
+h1 Game Players
+
 p
-= link_to "+ Player", new_player_path
+  = link_to "+ Player", new_player_path
+
+p
+  - if notice.present?
+    = notice
+
+h3 Added Players
+
+- @players.each do |player|
+    p
+      = player.name
