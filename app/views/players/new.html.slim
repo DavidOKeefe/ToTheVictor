@@ -1,0 +1,7 @@
+- if alert.present?
+  = alert
+
+= form_for @player do |p|
+  = p.label :name
+  = p.text_field :name
+  = p.submit "Add Player"
