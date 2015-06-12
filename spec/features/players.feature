@@ -17,6 +17,6 @@ Feature: Players
     And I see "Esme"
 
     When I click the "Edit" link
-    And I click the "Delete" link
+    And I click the "Delete" button
     Then I see "Player deleted"
     And I do not see "Esme"
