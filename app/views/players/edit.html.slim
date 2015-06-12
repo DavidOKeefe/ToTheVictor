@@ -1,1 +1,4 @@
 h3 Edit Player
+p
+  = form_for(@player, url: player_path, method: :delete) do |f|
+    = f.submit "Delete"

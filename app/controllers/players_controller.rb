@@ -23,6 +23,16 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
   end
 
+  def destroy
+    @player = Player.find(params[:id])
+    if @player.destroy
+      flash[:notice] = "Player deleted"
+      redirect_to players_path
+    else
+      flash[:alert] = "There was a problem!"
+    end
+  end
+
   private
 
   def player_params
