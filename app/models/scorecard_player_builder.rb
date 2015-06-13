@@ -3,8 +3,8 @@ class ScorecardPlayerBuilder
 
   attr_reader :name, :player_attributes
 
-  def initialize(params)
-    @player_attributes = params[:scorecard_player_builder]
+  def initialize(player_attributes)
+    @player_attributes = player_attributes
   end
 
   def save
