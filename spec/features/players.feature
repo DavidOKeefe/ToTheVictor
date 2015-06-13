@@ -16,12 +16,11 @@ Feature: Players
     Then I see "Player created"
     And I see "Esme"
 
-    When I click the "Edit" link
-    And I see 'Edit Player'
-    When I update the player name "Esme"
-    And I click the "Update Player" button
-    Then I see "Player Updated"
-    And I see "Esme"
+    When I click the 'Edit' link
+    And I update the player name "John Snow"
+    And I click the 'Update Player' button
+    Then I see 'Player Updated'
+    And I see "John Snow"
 
     When I click the "Edit" link
     And I click the "Delete" button
