@@ -17,6 +17,13 @@ Feature: Players
     And I see "Esme"
 
     When I click the "Edit" link
+    And I see 'Edit Player'
+    When I update the player name "Esme"
+    And I click the "Update Player" button
+    Then I see "Player Updated"
+    And I see "Esme"
+
+    When I click the "Edit" link
     And I click the "Delete" button
     Then I see "Player deleted"
     And I do not see "Esme"

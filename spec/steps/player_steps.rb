@@ -6,4 +6,8 @@ steps_for :player do
   step 'I name the new player :name' do |name|
     fill_in 'player_name', with: name
   end
+
+  step 'I update the player name :name' do |name|
+    fill_in 'player_name', with: name
+  end
 end
