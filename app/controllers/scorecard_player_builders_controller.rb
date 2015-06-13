@@ -7,7 +7,7 @@ class ScorecardPlayerBuildersController < ApplicationController
 
   def create
     @scorecard_player_builder = ScorecardPlayerBuilder.new(params)
-    if @scorecard_player_builder.built?
+    if @scorecard_player_builder.save
       @players = Player.all
       flash[:notice] = "Player created"
       respond_with @players, location: players_path

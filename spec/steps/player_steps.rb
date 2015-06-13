@@ -8,6 +8,6 @@ steps_for :player do
   end
 
   step 'I update the player name :name' do |name|
-    fill_in 'scorecard_player_builder_name', with: name
+    fill_in 'player_name', with: name
   end
 end

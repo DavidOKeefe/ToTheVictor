@@ -1,20 +1,23 @@
 class ScorecardPlayerBuilder
   include ActiveModel::Model
 
-  attr_accessor :name
-  attr_reader :player
+  attr_reader :name, :player_attributes
 
   def initialize(params)
-    @params = params
+    @player_attributes = params[:scorecard_player_builder]
   end
 
-  def built?
-    player.persisted?
+  def save
+    create_player
   end
 
   private
 
+  def create_player
+    player.save
+  end
+
   def player
-    @player ||= Player.create(name: 'sally')
+    Player.new(player_attributes)
   end
 end
