@@ -1,7 +1,8 @@
 class ScorecardPlayerBuilder
   include ActiveModel::Model
 
-  attr_reader :name, :player_attributes
+  attr_reader :name, :player, :player_attributes
+  private :player
 
   def initialize(player_attributes)
     @player_attributes = player_attributes
@@ -18,6 +19,6 @@ class ScorecardPlayerBuilder
   end
 
   def player
-    Player.new(player_attributes)
+    @player ||= Player.new(player_attributes)
   end
 end
