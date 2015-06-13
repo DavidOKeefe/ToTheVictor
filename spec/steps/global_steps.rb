@@ -10,6 +10,10 @@ step 'I see :text' do |text|
   expect(page).to have_content text
 end
 
+step 'I do not see :text' do |text|
+  expect(page).not_to have_content text
+end
+
 step 'I am a logged in user' do
   @user = create(:user)
   visit '/'
