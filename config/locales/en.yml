@@ -22,11 +22,11 @@
 en:
   dashboard:
     welcome: 'Welcome!'
-  scorecard:
-    new: "Let's Play"
   game_players:
     add: '+ Player'
     edit: 'Edit'
     roster: 'Added Players'
     title: 'Game Players'
 
+  scorecard:
+    new: "Let's Play"
