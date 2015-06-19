@@ -1,7 +1,7 @@
 - if alert.present?
   = alert
 
-= form_for @player do |p|
+= form_for @scorecard_player_builder do |p|
   = p.label :name
   = p.text_field :name
   = p.submit "Add Player"

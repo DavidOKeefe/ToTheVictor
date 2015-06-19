@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :players
+  resources :players, only: [:index, :edit, :update, :destroy]
+  resource :scorecard_player_builders, only: [:new, :create]
 end
