@@ -1,15 +1,15 @@
-h1 Game Players
+h1 = I18n.t('game_players.title')
 
 p
-  = link_to "+ Player", new_scorecard_player_builders_path
+  = link_to I18n.t('game_players.add'), new_scorecard_player_builders_path
 
 p
   - if notice.present?
     = notice
 
-h3 Added Players
+h3 =I18n.t('game_players.roster')
 
 - @players.each do |player|
     p
       = player.name
-      = link_to 'Edit', edit_player_path(player)
+      = link_to I18n.t('game_players.edit'), edit_player_path(player)
