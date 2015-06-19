@@ -1,5 +1,4 @@
 class ScorecardPlayerBuildersController < ApplicationController
-  respond_to :html
 
   def new
     @scorecard_player_builder = ScorecardPlayerBuilder.new({})
