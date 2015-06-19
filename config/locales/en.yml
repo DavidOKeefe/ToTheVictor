@@ -23,7 +23,8 @@ en:
   dashboard:
     welcome: 'Welcome!'
   game_players:
-    add: '+ Player'
+    add: 'Add Player'
+    new: '+ Player'
     edit: 'Edit'
     roster: 'Added Players'
     title: 'Game Players'
