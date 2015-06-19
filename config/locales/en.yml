@@ -27,6 +27,9 @@ en:
     edit: 'Edit'
     roster: 'Added Players'
     title: 'Game Players'
-
+  player:
+    delete: 'Delete'
+    edit: 'Edit Player'
+    update: 'Update Player'
   scorecard:
     new: "Let's Play"
