@@ -20,4 +20,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  dashboard:
+    welcome: 'Welcome!'
+  game_players:
+    add: 'Add Player'
+    new: '+ Player'
+    edit: 'Edit'
+    roster: 'Added Players'
+    title: 'Game Players'
+  player:
+    delete: 'Delete'
+    edit: 'Edit Player'
+    update: 'Update Player'
+  scorecard:
+    new: "Let's Play"

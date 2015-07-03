@@ -1,11 +1,11 @@
-h3 Edit Player
+h3 = I18n.t('player.edit')
 
 p
 = form_for @player do |p|
   = p.label :name
   = p.text_field :name
-  = p.submit "Update Player"
+  = p.submit I18n.t('player.update')
 
 p
   = form_for(@player, url: player_path, method: :delete) do |f|
-    = f.submit "Delete"
+    = f.submit I18n.t('player.delete')
