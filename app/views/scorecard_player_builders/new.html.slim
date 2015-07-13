@@ -4,4 +4,5 @@
 = form_for @scorecard_player_builder do |p|
   = p.label :name
   = p.text_field :name
+  = p.hidden_field :scorecard_id, value: params[:scorecard_id]
   = p.submit I18n.t('game_players.add')

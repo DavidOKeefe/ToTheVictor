@@ -1,24 +1,25 @@
 class ScorecardPlayerBuildersController < ApplicationController
 
   def new
-    @scorecard_player_builder = ScorecardPlayerBuilder.new({})
+    @scorecard_player_builder = ScorecardPlayerBuilder.new(scorecard_id: params[:scorecard_id])
   end
 
   def create
     @scorecard_player_builder = ScorecardPlayerBuilder
                                   .new(scorecard_player_builder_params)
-    if @scorecard_player_builder.save
-      @players = Player.all
-      redirect_to players_path, notice: "Player created"
+    if @scorecard_player_builder.scorecard_player
+      scorecard = @scorecard_player_builder.scorecard
+      @players = scorecard.players
+      redirect_to players_path(scorecard_id: scorecard.id), notice: "Player created"
     else
-      flash[:alert] = "Error! Player not created"
-      render :new
+      flash[:alert] = @scorecard_player_builder.errors.full_messages
+      render :new, scorecard_id: @scorecard_player_builder.scorecard_id
     end
   end
 
   private
 
   def scorecard_player_builder_params
-    params.require(:scorecard_player_builder).permit(:name)
+    params.require(:scorecard_player_builder).permit(:name, :scorecard_id)
   end
 end

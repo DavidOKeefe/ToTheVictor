@@ -33,4 +33,7 @@ en:
     edit: 'Edit Player'
     update: 'Update Player'
   scorecard:
+    welcome: 'Welcome!'
     new: "Let's Play"
+    create: "Let's Play"
+    name: "Name your Game: "

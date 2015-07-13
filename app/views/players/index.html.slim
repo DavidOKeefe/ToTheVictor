@@ -1,7 +1,8 @@
 h1 = I18n.t('game_players.title')
-
 p
-  = link_to I18n.t('game_players.new'), new_scorecard_player_builders_path
+  = @scorecard.name
+p
+  = link_to I18n.t('game_players.new'), new_scorecard_player_builders_path(scorecard_id: @scorecard.id)
 
 p
   - if notice.present?
