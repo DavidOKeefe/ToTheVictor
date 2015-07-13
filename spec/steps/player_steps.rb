@@ -1,6 +1,7 @@
 steps_for :player do
   step 'I am at the players index' do
-    visit players_path
+    scorecard = create(:scorecard)
+    visit players_path(scorecard_id: scorecard.id)
   end
 
   step 'I name the new player :name' do |name|
