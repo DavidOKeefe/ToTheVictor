@@ -1,0 +1,7 @@
+h1 = I18n.t('scorecard.welcome')
+
+p
+= form_for @scorecard do |s|
+  = s.label :name, I18n.t('scorecard.name')
+  = s.text_field :name
+  = s.submit I18n.t('scorecard.create')

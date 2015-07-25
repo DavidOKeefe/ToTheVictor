@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
-	def index
+  def index
+    @scorecard = Scorecard.find(params[:scorecard_id])
     @players = Player.all
 	end
 
@@ -11,7 +12,8 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
     if @player.update_attributes(player_params)
       flash[:notice] = "Player Updated"
-      redirect_to players_path
+      scorecard = @player.scorecard
+      redirect_to players_path(scorecard_id: scorecard.id)
     else
       flash[:alert] = "There was a problem!"
     end
@@ -21,7 +23,8 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
     if @player.destroy
       flash[:notice] = "Player deleted"
-      redirect_to players_path
+      scorecard = @player.scorecard
+      redirect_to players_path(scorecard_id: scorecard.id)
     else
       flash[:alert] = "There was a problem!"
     end

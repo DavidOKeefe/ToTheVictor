@@ -7,10 +7,11 @@ Rails.application.routes.draw do
     end
 
     authenticated :user do
-      root to: 'dashboard#index', as: :authenticated_root
+      root to: 'scorecards#new', as: :authenticated_root
     end
   end
 
   resources :players, only: [:index, :edit, :update, :destroy]
   resource :scorecard_player_builders, only: [:new, :create]
+  resources :scorecards, only: [:new, :create]
 end
