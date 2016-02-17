@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :scorecards
+
   devise :database_authenticatable,
          :recoverable,
          :registerable

@@ -22,6 +22,7 @@
 en:
   header:
     logout: 'Logout'
+    scorecards: 'View My Scorecards'
   dashboard:
     welcome: 'Welcome!'
   game_players:

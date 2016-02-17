@@ -13,5 +13,5 @@ Rails.application.routes.draw do
 
   resources :players, only: [:index, :edit, :update, :destroy]
   resource :scorecard_player_builders, only: [:new, :create]
-  resources :scorecards, only: [:new, :create]
+  resources :scorecards, only: [:new, :create, :index]
 end
