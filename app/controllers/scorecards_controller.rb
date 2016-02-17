@@ -1,4 +1,9 @@
 class ScorecardsController < ApplicationController
+
+  def index
+    @scorecards = current_user.scorecards
+  end
+
   def new
     @scorecard = Scorecard.new
   end
