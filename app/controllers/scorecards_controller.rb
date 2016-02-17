@@ -4,7 +4,7 @@ class ScorecardsController < ApplicationController
   end
 
   def create
-    scorecard = Scorecard.new(scorecard_params)
+    scorecard = Scorecard.new(new_scorecard_params)
     if scorecard.save
       redirect_to players_path(scorecard_id: scorecard.id)
     else
@@ -17,5 +17,9 @@ class ScorecardsController < ApplicationController
 
   def scorecard_params
     params.require(:scorecard).permit(:name)
+  end
+
+  def new_scorecard_params
+    scorecard_params.merge(user: current_user)
   end
 end
