@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  header:
+    logout: 'Logout'
   dashboard:
     welcome: 'Welcome!'
   game_players:
