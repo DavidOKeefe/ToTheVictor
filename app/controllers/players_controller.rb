@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
   def index
     @scorecard = Scorecard.find(params[:scorecard_id])
-    @players = Player.all
+    @players = @scorecard.players
 	end
 
   def edit
