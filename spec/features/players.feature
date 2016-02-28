@@ -21,3 +21,11 @@ Feature: Players
     And I click the "Delete" button
     Then I see "Player deleted"
     And I do not see "Esme"
+
+  @player
+  Scenario: Players display for current scorecard only
+    Given A previous scorecard already exists with a player
+    And I am at the players index
+    And I add a players to the scorecard
+    And I return to the players index
+    Then I see 1 players displayed
