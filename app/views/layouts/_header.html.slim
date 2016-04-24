@@ -2,3 +2,4 @@
   ul
     li = link_to(I18n.t('header.logout'), destroy_user_session_path)
     li = link_to(I18n.t('header.scorecards'), scorecards_path)
+    li = link_to(I18n.t('header.home'), authenticated_root_path)

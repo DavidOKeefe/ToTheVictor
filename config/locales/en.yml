@@ -23,6 +23,7 @@ en:
   header:
     logout: 'Logout'
     scorecards: 'View My Scorecards'
+    home: 'To The Victor!'
   dashboard:
     welcome: 'Welcome!'
   game_players:
