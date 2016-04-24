@@ -10,7 +10,8 @@ p
 
 h3 =I18n.t('game_players.roster')
 
+ul
 - @players.each do |player|
-    p
+    li.added_players
       = player.name
       = link_to I18n.t('game_players.edit'), edit_player_path(player)
