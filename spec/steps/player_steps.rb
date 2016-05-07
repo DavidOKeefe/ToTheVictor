@@ -21,6 +21,10 @@ steps_for :player do
     @scorecard.players.create(name: 'Jake')
   end
 
+  step 'I add a player with a name used on a previous scorecard' do
+    @scorecard.players.create(name: 'Esme')
+  end
+
   step 'I return to the players index' do
     visit players_path(scorecard_id: @scorecard.id)
   end
