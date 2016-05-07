@@ -13,7 +13,7 @@ class ScorecardPlayerBuildersController < ApplicationController
       redirect_to players_path(scorecard_id: scorecard.id), notice: "Player created"
     else
       flash[:alert] = @scorecard_player_builder.errors.full_messages
-      render :new, scorecard_id: @scorecard_player_builder.scorecard_id
+      redirect_to new_scorecard_player_builders_path(scorecard_id: params[:scorecard_player_builder][:scorecard_id])
     end
   end
 
