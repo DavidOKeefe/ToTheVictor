@@ -17,15 +17,33 @@ Feature: Players
     Then I see 'Player Updated'
     And I see "John Snow"
 
-    When I click the "Edit" link
+    When I click the "+ Player" link
+    And I name the new player "John Snow"
+    And I click the "Add Player" button
+    Then I see 'Name has already been taken'
+    When I name the new player "John Stark"
+    And I click the "Add Player" button
+    Then I see "Player created"
+    And I see "John Stark"
+    And I see "John Snow"
+
+    When I click the first "Edit" link
     And I click the "Delete" button
     Then I see "Player deleted"
-    And I do not see "Esme"
+    And I do not see "John Snow"
 
   @player
   Scenario: Players display for current scorecard only
     Given A previous scorecard already exists with a player
     And I am at the players index
     And I add a players to the scorecard
+    And I return to the players index
+    Then I see 1 players displayed
+
+  @player
+  Scenario: Players can be added to a new scorecard even if they have been added to previous scorecards
+    Given A previous scorecard already exists with a player
+    And I am at the players index
+    And I add a player with a name used on a previous scorecard
     And I return to the players index
     Then I see 1 players displayed
