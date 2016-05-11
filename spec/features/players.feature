@@ -17,10 +17,20 @@ Feature: Players
     Then I see 'Player Updated'
     And I see "John Snow"
 
-    When I click the "Edit" link
+    When I click the "+ Player" link
+    And I name the new player "John Snow"
+    And I click the "Add Player" button
+    Then I see 'Name has already been taken'
+    When I name the new player "John Stark"
+    And I click the "Add Player" button
+    Then I see "Player created"
+    And I see "John Stark"
+    And I see "John Snow"
+
+    When I click the first "Edit" link
     And I click the "Delete" button
     Then I see "Player deleted"
-    And I do not see "Esme"
+    And I do not see "John Snow"
 
   @player
   Scenario: Players display for current scorecard only

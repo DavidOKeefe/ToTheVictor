@@ -2,6 +2,10 @@ step 'I click the :text link' do |text|
   click_link text
 end
 
+step 'I click the first :text link' do |text|
+  click_link text, match: :first
+end
+
 step 'I click the :text button' do |text|
   click_button text
 end
